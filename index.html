@@ -71,7 +71,7 @@ function segmentOnCategories(categoryList){
     var params = {
       to: dateRange.to,
       from: dateRange.from,
-      'where':'properties["Event Category"] == "'+category+'"'
+      'where':'properties["'+orderCategoryName+'"] == "'+category+'"'
     };
     
     MP.api.segment(orderEventName, orderProductName, params).done(function(results){
@@ -93,7 +93,6 @@ function segmentOnCategories(categoryList){
         }
         child['children'] = children2;
         rootChild['children'].push(child);
-        console.log('here');
       }
       root['children'].push(rootChild);
       segmentOnCategories(categoryList);   

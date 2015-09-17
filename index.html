@@ -56,7 +56,6 @@ function runQuery(){
     var categoryList = [];
     for(var key in results.values()){
       categoryList.push(key);
-      console.log(categoryList);
     }
     segmentOnCategories(categoryList);
   });
@@ -94,6 +93,7 @@ function segmentOnCategories(categoryList){
         }
         child['children'] = children2;
         rootChild['children'].push(child);
+        console.log('here');
       }
       root['children'].push(rootChild);
       segmentOnCategories(categoryList);   

@@ -41,9 +41,14 @@ rect.background {
 /* Mixpanel Query */
 var dateSelect  = $('#dateSelect').MPDatepicker();
 var dateRange = dateSelect.MPDatepicker('value');
+
+// Event that's being segmented
 var orderEventName = 'Purchase Item';
+// First level segmentation property
 var orderCategoryName = 'Item Category';
+// Second level segmentation property
 var orderProductName = 'Product ID';
+// Last level will be a date distribution 
 
 var root = {"name":"flare", "children":[]};
 runQuery();
